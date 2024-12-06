@@ -7,11 +7,7 @@
  * Text Domain: mellon-custom-content 
  */
 
-// Your plugin code will go here... 
-
-
-
-
+ 
 // Single Template Hook
 add_action('single_template', 'mellon_posts_single_template');
 
@@ -46,4 +42,7 @@ function mellon_posts_archive_template($original_archive_template) {
 
 
 require_once plugin_dir_path( __FILE__ ) . 'includes/content_types.php';
+require_once plugin_dir_path( __FILE__ ) . 'includes/restapi.php';
 require_once plugin_dir_path( __FILE__ ) . 'includes/scripts.php';
+require_once plugin_dir_path( __FILE__ ) . 'includes/fields.php';
+require_once plugin_dir_path( __FILE__ ) . 'includes/filtermaterial.php';

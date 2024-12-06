@@ -1,0 +1,72 @@
+.material-container {
+    display: flex;
+    gap: 20px; /* Adjust spacing between main content and sidebar */
+    .main-content{
+        margin-top: 40px;
+        flex: 4; /* Default: 4/5 width */ 
+        .featured-image {
+            max-width: 400px;
+            width: 100%;
+            margin: 0px 20px 20px 0px;
+            float: left;
+        }
+
+    }
+   
+    
+    .materials-sidebar {
+        flex: 1; /* Default: 1/5 width */
+    }
+   
+    
+    /* Medium screens (e.g., tablets) */
+    
+}
+
+.related-material {
+    clear: both;
+    margin-top: 20px;
+    .material-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns by default */
+        gap: 20px; /* Adjust spacing between grid items */
+    }
+    
+    .material {
+        /* Add any styles for individual material items here */
+    }
+    
+    /* For mobile phones */
+    @media (max-width: 768px) {
+        .material-grid {
+            grid-template-columns: 1fr; /* Single column on mobile */
+        }
+    }
+
+}
+
+.materials-sidebar {
+    margin-top: 40px;
+}
+
+@media (max-width: 992px) { 
+    .main-content {
+        flex: 3; /* 3/4 width */
+    }
+
+    .materials-sidebar {
+        flex: 1; /* 1/4 width */
+    }
+}
+
+/* Small screens (e.g., phones) */
+@media (max-width: 768px) {
+    .material-container {
+        flex-direction: column; /* Stack vertically */
+    }
+
+    .main-content, 
+    .materials-sidebar {
+        flex: 1; /* Each takes full width */
+    }
+}

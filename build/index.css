@@ -1,4 +1,145 @@
 /*!***************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./sass/main.scss ***!
   \***************************************************************************************************************************************************************************************************************************************/
+.material-container {
+  display: flex;
+  gap: 20px; /* Adjust spacing between main content and sidebar */
+  /* Medium screens (e.g., tablets) */
+}
+.material-container .main-content {
+  margin-top: 40px;
+  flex: 4; /* Default: 4/5 width */
+}
+.material-container .main-content .featured-image {
+  max-width: 400px;
+  width: 100%;
+  margin: 0px 20px 20px 0px;
+  float: left;
+}
+.material-container .materials-sidebar {
+  flex: 1; /* Default: 1/5 width */
+}
 
+.related-material {
+  clear: both;
+  margin-top: 20px;
+  /* For mobile phones */
+}
+.related-material .material-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns by default */
+  gap: 20px; /* Adjust spacing between grid items */
+}
+.related-material .material {
+  /* Add any styles for individual material items here */
+}
+@media (max-width: 768px) {
+  .related-material .material-grid {
+    grid-template-columns: 1fr; /* Single column on mobile */
+  }
+}
+
+.materials-sidebar {
+  margin-top: 40px;
+}
+
+@media (max-width: 992px) {
+  .main-content {
+    flex: 3; /* 3/4 width */
+  }
+  .materials-sidebar {
+    flex: 1; /* 1/4 width */
+  }
+}
+/* Small screens (e.g., phones) */
+@media (max-width: 768px) {
+  .material-container {
+    flex-direction: column; /* Stack vertically */
+  }
+  .main-content,
+  .materials-sidebar {
+    flex: 1; /* Each takes full width */
+  }
+}
+#mellon-filter {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.mellon-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.mellon-grid-container .mellon-item {
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+.mellon-grid-container .mellon-item a {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+}
+.mellon-grid-container .mellon-item a .mellon-item-inner {
+  position: relative;
+  padding-bottom: 100%;
+}
+.mellon-grid-container .mellon-item a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.mellon-grid-container .mellon-item h3 {
+  margin-top: 10px;
+}
+.mellon-grid-container .mellon-item .mellon-item-categories {
+  position: absolute;
+  width: 90%;
+  top: 20px;
+  right: 0px;
+  padding-right: 10px;
+  text-align: right;
+  color: white;
+  background-color: rgba(212, 60, 24, 0.3);
+}
+
+.mellon-item.hidden {
+  opacity: 0;
+}
+
+.category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.category-button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.category-button {
+  background-color: #999;
+  color: white;
+  border-color: #666;
+}
+
+.category-button.active {
+  background-color: #d43c18;
+  color: white;
+  border-color: #d43c18;
+}
+
+/*# sourceMappingURL=index.css.map*/

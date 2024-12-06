@@ -11,7 +11,7 @@ function mellon_post_types() {
 		'rewrite' => array('slug' => 'material'),
 		'public' => true,
 		'show_in_rest' => true,	
-		'menu_icon' => 'dashicons-id-alt',
+		'menu_icon' => 'dashicons-smiley',
 		'labels' => array(
 			'name' => 'Υλικό',
 			'add_new_item' => 'Προσθήκη Υλικού',
