@@ -28,6 +28,9 @@ This plugin is made to create extra data and maps for the Geotour Crete website
 This plugin utilizes SCF plugin
 
 **Changelog:**
+** 1.0.1
+* Minor changes 
+
 ** 1.0.0 
 * Added the content type mellon material and the respective scf (acf) fields.
 * Added the respective category and tag taxonomies to be used with material

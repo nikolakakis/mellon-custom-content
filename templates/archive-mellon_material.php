@@ -76,7 +76,7 @@ jQuery(document).ready(function($) {
     // Function to perform the AJAX filtering
     function filterMellonMaterial(selectedCategories) {
         $.ajax({
-            url: "https://mellon.local/wp-json/mellon/v1/material",
+            url: "/wp-json/mellon/v1/material",
             type: 'GET',
             data: {
                 action: 'filter_mellon_material', 
